@@ -163,7 +163,10 @@ FileModel = BaseModel.extend
 		# Apply meta
 		@meta = new Backbone.Model()
 		@meta.set(meta)  if meta
-
+		
+		# Set Max listeners for events to unlimited
+		@setMaxListeners 0
+		
 		# Advanced attributes
 		@set(
 			extensions: []
